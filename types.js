@@ -86,16 +86,16 @@ export class Choice {
     /**
      * @param {string} id 
      * @param {string} name
-     * @param {string[]} info
      * @param {string} img 
      * @param {T} item 
+     * @param {string[]} info
      */
-    constructor(id, name, info, img, item) {
+    constructor(id, name, img, item, info = []) {
         this.id = id;
         this.name = name;
-        this.info = info ?? [];
         this.img = img;
         this.item = item;
+        this.info = info;
     }
 }
 
@@ -108,4 +108,15 @@ export class Option {
 
     /** @type boolean */
     value;
+
+    /**
+     * @param {string} id 
+     * @param {string} label
+     * @param {boolean} value 
+     */
+    constructor(id, label, value) {
+        this.id = id;
+        this.label = label;
+        this.value = value;
+    }
 }
