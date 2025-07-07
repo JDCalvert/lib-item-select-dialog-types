@@ -30,6 +30,19 @@ export class Response {
      * An object containing the values of the options passed in dialog parameters.
      */
     options;
+
+    /**
+     * 
+     * @param {Choice<T>} choice 
+     * @param {Object} options 
+     * @returns 
+     */
+    constructor(choice, options) {
+        return {
+            choice,
+            options
+        };
+    }
 }
 
 /**
